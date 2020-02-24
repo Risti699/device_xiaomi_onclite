@@ -492,4 +492,7 @@
 
     <!-- Whether the display blanks itself when transitioning from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">false</bool>
+
+    <!-- Smart Charing is available for OP3 -->
+    <bool name="config_smartChargingAvailable">true</bool>
 </resources>
