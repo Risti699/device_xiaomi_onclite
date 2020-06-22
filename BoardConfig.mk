@@ -42,18 +42,25 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 
 # Kernel
-BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78af000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true loop.max_part=7
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_PAGESIZE :=  2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/onclite
-TARGET_KERNEL_CONFIG := onclite-perf_defconfig
+BOARD_KERNEL_CMDLINE := \
+    console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 \
+    androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 \
+    lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci \
+    earlycon=msm_serial_dm,0x78af000 firmware_class.path=/vendor/firmware_mnt/image \
+    androidboot.usbconfigfs=true loop.max_part=7
+
+BOARD_KERNEL_BASE           := 0x80000000
+BOARD_KERNEL_IMAGE_NAME     := Image.gz-dtb
+BOARD_KERNEL_PAGESIZE       := 2048
+TARGET_KERNEL_SOURCE        := kernel/xiaomi/onclite
+TARGET_KERNEL_CONFIG        := onclite-perf_defconfig
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_DTBOIMG_PARTITION_SIZE := 8388608
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_ARCH          := arm64
+TARGET_KERNEL_VERSION       := 4.9
+
+BOARD_MKBOOTIMG_ARGS := \
+    --ramdisk_offset 0x01000000 \
+    --tags_offset 0x00000100
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -167,6 +174,7 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3758096384
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
@@ -182,7 +190,6 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Qualcomm
@@ -201,6 +208,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
 
 # Treble
 BOARD_VNDK_RUNTIME_DISABLE := true
