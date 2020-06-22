@@ -37,6 +37,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="onc" \
     PRIVATE_BUILD_DESC="onc-user 9 PKQ1.181021.001 V11.0.3.0.PFLMIXM release-keys"
 
-BUILD_FINGERPRINT := "xiaomi/onc/onc:9/PKQ1.181021.001/V11.0.3.0.PFLMIXM:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
