@@ -4,5 +4,11 @@
    "target_path": "vendor/xiaomi/onclite",
    "branch": "ten",
    "remote": "github"
+ },
+ {
+   "repository": "mylove90/android_kernel_xiaomi_onc",
+   "target_path": "kernel/xiaomi/onclite",
+   "branch": "Q",
+   "remote": "github"
  }
 ]
