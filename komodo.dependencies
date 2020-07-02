@@ -1,14 +1,14 @@
 [
  {
-   "repository": "hadaddarajat/android_vendor_xiaomi_onclite",
+   "repository": "TheSync/android_vendor_xiaomi_onclite",
    "target_path": "vendor/xiaomi/onclite",
    "branch": "ten",
    "remote": "github"
  },
  {
-   "repository": "mylove90/android_kernel_xiaomi_onc",
+   "repository": "TheSync/android_kernel_xiaomi_onclite",
    "target_path": "kernel/xiaomi/onclite",
-   "branch": "Q",
+   "branch": "ten",
    "remote": "github"
  }
 ]
