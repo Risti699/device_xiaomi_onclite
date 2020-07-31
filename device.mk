@@ -28,6 +28,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1520
 TARGET_SCREEN_WIDTH := 720
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -324,10 +325,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# RetroMusic
-PRODUCT_PACKAGES += \
-    RetroMusic
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

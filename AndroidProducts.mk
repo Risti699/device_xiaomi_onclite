@@ -1,6 +1,6 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/komodo_onclite.mk
+    $(LOCAL_DIR)/aosp_onclite.mk
 
 COMMON_LUNCH_CHOICES := \
-    komodo_onclite-user \
-    komodo_onclite-userdebug
+    aosp_onclite-user \
+    aosp_onclite-userdebug
