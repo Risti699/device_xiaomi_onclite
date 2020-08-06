@@ -65,3 +65,5 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 persist.vendor.radio.procedure_bytes=SKIP
+sys.display-size=1920x1080
+vendor.video.disable.ubwc=1
