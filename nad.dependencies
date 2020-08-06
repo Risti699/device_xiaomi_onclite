@@ -1,12 +1,12 @@
 [
  {
-   "repository": "TheSync/android_vendor_xiaomi_onclite",
+   "repository": "NusantaraROM-Devices/vendor_xiaomi_onclite",
    "target_path": "vendor/xiaomi/onclite",
-   "branch": "ten",
+   "branch": "10",
    "remote": "github"
  },
  {
-   "repository": "TheSync/android_kernel_xiaomi_onclite",
+   "repository": "Risti699/android_kernel_xiaomi_onclite",
    "target_path": "kernel/xiaomi/onclite",
    "branch": "ten",
    "remote": "github"
