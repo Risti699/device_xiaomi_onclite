@@ -14,6 +14,7 @@ $(call inherit-product, device/xiaomi/onclite/device.mk)
 
 # Inherit some common Pixys stuff.
 $(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixys/CarrierSettings/config.mk)
 
 #Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
