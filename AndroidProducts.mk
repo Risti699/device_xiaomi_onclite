@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_onclite.mk
+    $(LOCAL_DIR)/revengeos_onclite.mk
