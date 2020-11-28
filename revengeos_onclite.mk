@@ -12,6 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from onclite device
 $(call inherit-product, device/xiaomi/onclite/device.mk)
 
+# GAPPS included
+$(call inherit-product-if-exists, vendor/gapps/config.mk)
+
 # Inherit some common RevengeOS stuff.
 $(call inherit-product, vendor/revengeos/config/common.mk)
 
