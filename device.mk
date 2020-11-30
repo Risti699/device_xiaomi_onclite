@@ -450,6 +450,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-# XiaomiParts
+#XiaomiParts
+#PRODUCT_PACKAGES += \
+#   XiaomiParts
+
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    NusantaraPapers

@@ -12,31 +12,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from onclite device
 $(call inherit-product, device/xiaomi/onclite/device.mk)
 
-# GAPPS included
-$(call inherit-product-if-exists, vendor/gapps/config.mk)
+# Inherit some common NusantaraROM stuff
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+$(call inherit-product, packages/apps/NusantaraParts/nadproject.mk)
 
-# Inherit some common RevengeOS stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
-
-#Boot animation
-TARGET_BOOT_ANIMATION_RES := 720
-
-#Gapps
-TARGET_GAPPS_ARCH := arm64
+NAD_BUILD_TYPE := OFFICIAL
+USE_PIXEL_CHARGING := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := revengeos_onclite
+PRODUCT_NAME := nad_onclite
 PRODUCT_DEVICE := onclite
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 7
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RD1A.201105.003.C1/6886399:user/release-keys"
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 11 RD1A.201105.003.C1 6886399 release-keys"
+    PRODUCT_NAME="onc" \
+    TARGET_DEVICE="onc" \
+    PRIVATE_BUILD_DESC="coral-user 11 RP1A.201005.006 6828489 release-keys"
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=google/redfin/redfin:11/RD1A.201105.003.C1/6886399:user/release-keys
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+

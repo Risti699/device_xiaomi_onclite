@@ -1,0 +1,33 @@
+[
+  {
+    "repository": "NusantaraROM-Devices/vendor_xiaomi_onclite",
+    "target_path": "vendor/xiaomi/onclite",
+    "branch": "11",
+    "remote": "github"
+  },
+  {
+"remote": "priv",
+    "repository"Risti699/Jflaa",
+    "target_path": "kernel/xiaomi/onclite",
+    "branch": "11",
+  },
+{
+        "remote"	    : "github",
+        "repository"	: "silont-project/silont-clang",
+        "target_path"	: "prebuilts/clang/host/linux-x86/clang-silont",
+        "branch"	    : "master"
+    },
+  {
+    "remote": "priv",
+    "repository": "android_packages_apps_NusantaraParts",
+    "target_path": "packages/apps/NusantaraParts", 
+    "branch": "11"
+   },
+   {
+     "remote": "priv",
+     "repository": "android_packages_apps_NusantaraPapers",
+     "target_path": "packages/apps/NusantaraPapers",
+     "branch": "10"
+   }
+]
+
